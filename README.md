@@ -8,10 +8,10 @@ git clone https://github.com/Suwi-inc/submision-emailer.git
 ``` 
 ### 2. Navigate to the root directory of the project
 ```
-cd email 
+cd submision-emailer
 ```
 
-### 3. Create an application.yml config file with the following feilds in ``src/main/recources``
+### 3. Create an application.yml config file in ``src/main/recources`` with the following fields:
 ```
 server:
     port: 
@@ -33,10 +33,10 @@ target: {destination email}
 ```
 ### 4. Build the image and Run the application using
 ```
-docker build -t image-name
-docker run -p 8080:8080 image-name
+docker build -t image-name .
+docker run -d -p 8080:8080 image-name
 ```
-### 5. Send a tst request with 
+### 5. Send a test request with 
 ```
 curl.exe -X POST "http://localhost:8080/api/send" ^
     -d "name=John Doe" ^
